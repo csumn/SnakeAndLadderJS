@@ -29,6 +29,7 @@ gamePlay = () => {
                 console.log(`The Option is -- ${ladder} -- Ladder\n`);
                 playerPosition += numberOnDie;
                 if (playerPosition > winningPosition) {
+                    console.log(`Current position is moving above ${winningPosition}... Please roll the die again !!!!!\n`);
                     playerPosition -= numberOnDie;
                 }
                 break;
