@@ -14,6 +14,7 @@ RandomOption = () => {
 }
 
 gamePlay = () => {
+    let count = 0;
     let playerPosition = 0;
     let numberOnDie;
     console.log(`\nInitial position of Player is : ${playerPosition}\n`);
@@ -23,7 +24,7 @@ gamePlay = () => {
         console.log(`\n------------------------------------------\n`);
         console.log(`Number on Die is : ${numberOnDie}\n`);
         let option = RandomOption();
-
+        count++;
         switch (option) {
             case ladder:
                 console.log(`The Option is -- ${ladder} -- Ladder\n`);
@@ -46,9 +47,8 @@ gamePlay = () => {
         }
         console.log(`Now the player position is : ${playerPosition}\n`);
     }
-
+    console.log(`Player Rolled ${count} time for winning the game\n`);
     console.log(`\n*******          Player Won           *******\n`);
-
 }
 
 module.exports = { gamePlay }
